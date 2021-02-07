@@ -13,12 +13,22 @@
 *
 * - It returns an empty array if it gets passed an empty array:
 *       pairs([]) returns []
-*
+
 * - It returns an empty array if it gets passed nothing:
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+ 
+  const pairing = [];
+
+ while (names.length > 1) {
+   pairing.push([names.getRandom(), names.getRandom()]);
+ }
+if (names.length) {
+  pairing.push([names.pop()])
+}
+
+return pairing
 }
 
 module.exports = pairs;
